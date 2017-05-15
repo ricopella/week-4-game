@@ -1,25 +1,40 @@
 body {
     background: url("../images/topography.png");
+    padding: 1%;
 }
 
-header {
+header h1 {
     background-color: orangered;
     color: white;
+    width: 28%;
+    padding: 2%;
 }
 
 #instructions {
     color: green;
     background-color: darkgray;
+    width: 42%;
+    padding: 2%;
+    margin: 1%;
 }
 
 #randomNumber {
     background-color: greenyellow;
     color: violet;
+    width: 20%;
+    margin: 1%;
+    padding: 1%;
+    position: relative;
+    float: left;
 }
 
 .winlo {
     background-color: teal;
     color: black;
+    width: 8%;
+    padding: 1%;
+    position: relative;
+    float: left;
 }
 
 .jewels {
@@ -29,4 +44,6 @@ header {
 .totalScore {
     background-color: indianred;
     color: white;
+    width: 21%;
+    padding: 2%;
 }

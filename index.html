@@ -20,10 +20,9 @@
 
 <body>
     <header>
-        <h1 class="container">CrystalsCollector!</h1>
+        <h1>CrystalsCollector!</h1>
     </header>
-
-    <div class="container">
+    <div class="row">
         <div id="instructions">
             <p>You will be given a random number at the start of the game.</p>
             <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -31,21 +30,24 @@
             <p>The value of each crystal is hidden from you until you click on it.</p>
             <p>Eeach time when the game starts, the game will change the values of each crystal.</p>
         </div>
-        <div id="randomNumber"></div>
+    </div>
+    <div class="row">
+        <div id="randomNumber">Something here</div>
         <div class="winlo">
             <div id="win">Wins: </div>
             <div id="loss">Losses: </div>
         </div>
-        <div class="row jewels">
-            <div id="crystal1"></div>
-            <div id="crystal2"></div>
-            <div id="crystal3"></div>
-            <div id="crystal4"></div>
-        </div>
-        <div class="container totalScore">
-            <p>Your total score is:</p>
-            <div id="total"></div>
-        </div>
+    </div>
+    <div class="row jewels">
+        <div id="crystal1"></div>
+        <div id="crystal2"></div>
+        <div id="crystal3"></div>
+        <div id="crystal4"></div>
+    </div>
+    <div class="totalScore">
+        <p>Your total score is:</p>
+        <div id="total">Something here</div>
+    </div>
     </div>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
