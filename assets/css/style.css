@@ -1,0 +1,32 @@
+body {
+    background: url("../images/topography.png");
+}
+
+header {
+    background-color: orangered;
+    color: white;
+}
+
+#instructions {
+    color: green;
+    background-color: darkgray;
+}
+
+#randomNumber {
+    background-color: greenyellow;
+    color: violet;
+}
+
+.winlo {
+    background-color: teal;
+    color: black;
+}
+
+.jewels {
+    background-color: white;
+}
+
+.totalScore {
+    background-color: indianred;
+    color: white;
+}
