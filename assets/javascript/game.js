@@ -54,13 +54,6 @@ var startGame = function() {
 
     console.log(jewelArray);
 
-    // set individual values for all 4 images from the jewlArray
-    $crystal1.val(jewelArray[0]);
-    $crystal2.val(jewelArray[1]);
-    $crystal3.val(jewelArray[2]);
-    $crystal4.val(jewelArray[3]);
-
-    //  Update html on page
 
     // update total score
     $totalScore.html(totalScore);
@@ -71,11 +64,12 @@ var startGame = function() {
     // update losses
     $losses.html(losses);
 
-}
+};
 
 var roundComplete = function() {
 
-    // add event listeners for each button being clicked
+    // event listener for value of img being clicked
+    // add to total score
     $crystal1.click(function() {
         totalScore = jewelArray[0] + totalScore;
         // update total score
@@ -95,14 +89,23 @@ var roundComplete = function() {
         totalScore = jewelArray[3] + totalScore;
         // update total score
         $totalScore.html(totalScore);
+        console.log(totalScore);
     });
+    console.log("total score is: " + totalScore);
 
     // if total === randomNumber, win!
+    if (totalScore === randomNumber) {
+        win++;
+        window.alert("You won! Click 'OK' for next roun.");
+        startGame();
+        // else if total > randomNumber, lose!
+    } else if (totalScore > randomNumber) {
+        losses++;
+        window.alert("You Lost.");
+        startGame();
+    }
+};
 
-    // else if total > randomNumber, lose!
-
-
-}
 
 // once page loads, game starts
 window.onload = startGame();
