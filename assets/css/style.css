@@ -6,7 +6,7 @@ body {
 header h1 {
     background-color: orangered;
     color: white;
-    width: 28%;
+    width: 35%;
     padding: 2%;
 }
 
@@ -26,6 +26,7 @@ header h1 {
     padding: 1%;
     position: relative;
     float: left;
+    font-size: 30px;
 }
 
 .winlo {
@@ -39,6 +40,11 @@ header h1 {
 
 .jewels {
     background-color: white;
+}
+
+.jewels img {
+    width: 10%;
+    float: left;
 }
 
 .totalScore {
