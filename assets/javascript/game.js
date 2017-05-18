@@ -40,6 +40,9 @@ var startGame = function() {
     //  reset total score
     totalScore = 0;
 
+    // reset jewwlArray
+    jewelArray = [];
+
     // generate randomNumber 19 - 120
     randomNumber = Math.floor(Math.random() * 120) + 19;
     $randNum.html(randomNumber);
@@ -58,12 +61,6 @@ var startGame = function() {
     // update total score
     $totalScore.html(totalScore);
 
-    // update wins
-    $wins.html(wins);
-
-    // update losses
-    $losses.html(losses);
-
 };
 
 var roundComplete = function() {
@@ -73,16 +70,19 @@ var roundComplete = function() {
     $crystal1.click(function() {
         totalScore = jewelArray[0] + totalScore;
         // update total score
+        console.log("1:" + totalScore);
         $totalScore.html(totalScore);
     });
     $crystal2.click(function() {
         totalScore = jewelArray[1] + totalScore;
         // update total score
+        console.log("2:" + totalScore);
         $totalScore.html(totalScore);
     });
     $crystal3.click(function() {
         totalScore = jewelArray[2] + totalScore;
         // update total score
+        console.log("3:" + totalScore);
         $totalScore.html(totalScore);
     });
     $crystal4.click(function() {
@@ -91,7 +91,7 @@ var roundComplete = function() {
         $totalScore.html(totalScore);
         console.log(totalScore);
     });
-    console.log("total score is: " + totalScore);
+    console.log("total score is: " + totalScore + " Randome Number is " + randomNumber);
 
     // if total === randomNumber, win!
     if (totalScore === randomNumber) {
@@ -113,4 +113,10 @@ window.onload = startGame();
 // once page loads, game starts
 $(document).ready(function() {
     roundComplete();
+
+    // update wins
+    $wins.html(wins);
+
+    // update losses
+    $losses.html(losses);
 });
