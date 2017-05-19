@@ -21,6 +21,7 @@
 //      -   add to losses
 //      -   start new game
 
+// Global Variables
 var losses = 0;
 var wins = 0;
 var totalScore = 0;
@@ -46,8 +47,6 @@ var startGame = function() {
     // generate randomNumber 19 - 120
     randomNumber = Math.floor(Math.random() * 120) + 19;
     $randNum.html(randomNumber);
-    console.log(randomNumber);
-
 
     // creates random 4 numbers from 1-12 and pushes to jewlArray
     for (i = 0; i < 4; i++) {
@@ -55,56 +54,61 @@ var startGame = function() {
         jewelArray.push(jewlNum);
     }
 
-    console.log(jewelArray);
-
-
     // update total score
     $totalScore.html(totalScore);
 
-};
+}; // end startGame
 
 var roundComplete = function() {
 
     // event listener for value of img being clicked
     // add to total score
+
     $crystal1.click(function() {
         totalScore = jewelArray[0] + totalScore;
         // update total score
-        console.log("1:" + totalScore);
         $totalScore.html(totalScore);
+        checkWin();
     });
     $crystal2.click(function() {
         totalScore = jewelArray[1] + totalScore;
         // update total score
-        console.log("2:" + totalScore);
         $totalScore.html(totalScore);
+        checkWin();
     });
     $crystal3.click(function() {
         totalScore = jewelArray[2] + totalScore;
         // update total score
-        console.log("3:" + totalScore);
         $totalScore.html(totalScore);
+        checkWin();
+
     });
     $crystal4.click(function() {
         totalScore = jewelArray[3] + totalScore;
         // update total score
         $totalScore.html(totalScore);
-        console.log(totalScore);
+        checkWin();
     });
-    console.log("total score is: " + totalScore + " Randome Number is " + randomNumber);
+    console.log("total score is: " + totalScore + " Random Number is " + randomNumber);
 
-    // if total === randomNumber, win!
-    if (totalScore === randomNumber) {
-        win++;
-        window.alert("You won! Click 'OK' for next roun.");
-        startGame();
-        // else if total > randomNumber, lose!
-    } else if (totalScore > randomNumber) {
-        losses++;
-        window.alert("You Lost.");
-        startGame();
-    }
-};
+
+    // function to check if player wins or losses
+    var checkWin = function() {
+            // if total === randomNumber, win!
+            if (totalScore === randomNumber) {
+                wins++;
+                $wins.html(wins);
+                window.alert("You won! Click 'OK' for next round.");
+                startGame();
+                // else if total > randomNumber, lose!
+            } else if (totalScore > randomNumber) {
+                losses++;
+                $losses.html(losses);
+                window.alert("You Lost.");
+                startGame();
+            }
+        } // end checkWin
+}; // end roundComplete
 
 
 // once page loads, game starts
