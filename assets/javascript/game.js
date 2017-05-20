@@ -119,8 +119,8 @@ $(document).ready(function() {
     roundComplete();
 
     // update wins
-    $wins.html(wins);
+    $wins.append(wins);
 
     // update losses
-    $losses.html(losses);
+    $losses.append(losses);
 });
