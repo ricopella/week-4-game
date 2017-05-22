@@ -95,13 +95,13 @@ var roundComplete = function() {
             // if total === randomNumber, win!
             if (totalScore === randomNumber) {
                 wins++;
-                $wins.html(wins);
+                $wins.html("Wins: " + wins);
                 window.alert("You won! Click 'OK' for next round.");
                 startGame();
                 // else if total > randomNumber, lose!
             } else if (totalScore > randomNumber) {
                 losses++;
-                $losses.html(losses);
+                $losses.html("Losses: " + losses);
                 window.alert("You Lost.");
                 startGame();
             }
