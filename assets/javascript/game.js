@@ -46,7 +46,7 @@ var startGame = function() {
 
     // generate randomNumber 19 - 120
     randomNumber = Math.floor(Math.random() * 120) + 19;
-    $randNum.html(randomNumber);
+    $randNum.html("Number To Reach: " + randomNumber);
 
     // creates random 4 numbers from 1-12 and pushes to jewlArray
     for (i = 0; i < 4; i++) {
@@ -89,8 +89,6 @@ var roundComplete = function() {
         $totalScore.html(totalScore);
         checkWin();
     });
-    console.log("total score is: " + totalScore + " Random Number is " + randomNumber);
-
 
     // function to check if player wins or losses
     var checkWin = function() {

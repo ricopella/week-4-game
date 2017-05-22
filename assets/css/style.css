@@ -21,10 +21,11 @@ header h1 {
 #randomNumber {
     background-color: greenyellow;
     color: violet;
-    width: 20%;
-    margin: 1%;
-    padding: 1%;
-    position: relative;
+    height: 65px;
+    width: 32%;
+    margin-left: 12.5%;
+    margin-right: 1%;
+    margin-top: 2%;
     font-size: 30px;
 }
 
@@ -35,14 +36,19 @@ header h1 {
 .winlo {
     background-color: teal;
     color: black;
-    width: 8%;
-    margin: 1%;
-    padding: 1%;
+    height: 65px;
+    width: 41%;
+    margin-right: 12.5%;
+    margin-left: 1%;
+    margin-top: 2%;
+    font-size: 23px;
+    text-align: center;
 }
 
 .alert {
     width: 75%;
     margin: 0 auto;
+    margin-top: 2%;
 }
 
 .jewels {
@@ -50,6 +56,7 @@ header h1 {
     margin-right: 12.5%;
     margin-left: 12.5%;
     margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 .jewels img {
