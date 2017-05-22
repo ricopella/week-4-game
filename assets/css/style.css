@@ -25,26 +25,35 @@ header h1 {
     margin: 1%;
     padding: 1%;
     position: relative;
-    float: left;
     font-size: 30px;
+}
+
+.totals {
+    margin: 0 auto;
 }
 
 .winlo {
     background-color: teal;
     color: black;
     width: 8%;
+    margin: 1%;
     padding: 1%;
-    position: relative;
-    float: left;
+}
+
+.alert {
+    width: 75%;
+    margin: 0 auto;
 }
 
 .jewels {
     background-color: white;
+    margin-right: 12.5%;
+    margin-left: 12.5%;
+    margin-bottom: 2%;
 }
 
 .jewels img {
-    width: 10%;
-    float: left;
+    width: 90%;
 }
 
 .totalScore {
@@ -52,4 +61,7 @@ header h1 {
     color: white;
     width: 21%;
     padding: 1%;
+    margin-top: 2%;
+    margin: 0 auto;
+    text-align: center;
 }

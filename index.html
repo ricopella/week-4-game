@@ -20,36 +20,38 @@
 </head>
 
 <body>
-    <header>
-        <h1>CrystalsCollector</h1>
-    </header>
-    <div class="row">
-        <div id="instructions">
-            <p>You will be given a random number at the start of the game.</p>
-            <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-            <p>You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.</p>
-            <p>The value of each crystal is hidden from you until you click on it.</p>
-            <p>Eeach time when the game starts, the game will change the values of each crystal.</p>
-        </div>
+    <div class="alert alert-success" role="alert">
+        <h2 class="alert-header">CrystalsCollector</h2>
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <p>You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
     </div>
-    <div class="row">
-        <div id="randomNumber"></div>
-        <div class="winlo">
-
-            <div id="win">Wins:</div>
-
-            <div id="loss">Losses:</div>
+    <div class="row totals">
+        <div id="randomNumber" class="col-md-6"></div>
+        <div class="winlo col-md-6">
+            <div id="win"></div>
+            <div id="loss"></div>
         </div>
     </div>
     <div class="row jewels">
-        <a href="#" id="crystal1"><img src="assets/images/cranberry.jpg" title="crystal 1" alt="crystal 1"></a>
-        <a href="#" id="crystal2"><img src="assets/images/purple.jpg" title="crystal 2" alt="crystal 2"></a>
-        <a href="#" id="crystal3"><img src="assets/images/teal.jpg" title="crystal 3" alt="crystal 3"></a>
-        <a href="#" id="crystal4"><img src="assets/images/purple2.jpg" title="crystal 4" alt="crystal 4"></a>
+        <div class="col-md-3 col-sm-6">
+            <a href="#" id="crystal1"><img src="assets/images/cranberry.jpg" title="crystal 1" alt="crystal 1"></a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <a href="#" id="crystal2"><img src="assets/images/purple.jpg" title="crystal 2" alt="crystal 2"></a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <a href="#" id="crystal3"><img src="assets/images/teal.jpg" title="crystal 3" alt="crystal 3"></a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <a href="#" id="crystal4"><img src="assets/images/purple2.jpg" title="crystal 4" alt="crystal 4"></a>
+        </div>
     </div>
     <div class="totalScore">
         <p>Your total score is:</p>
-        <div id="total">Something here</div>
+        <div id="total"></div>
     </div>
     </div>
 
